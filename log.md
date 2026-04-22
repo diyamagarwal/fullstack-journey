@@ -3,3 +3,6 @@ Starting Full Stack development journey formally in github. I aim to be a skille
 
 21 April 2026
 Variables and Data Types
+
+22 April 2026
+Type conversions, alert and prompt

@@ -6,3 +6,6 @@ Variables and Data Types
 
 22 April 2026
 Type conversions, alert and prompt
+
+26 May 2026
+If else and logical operators

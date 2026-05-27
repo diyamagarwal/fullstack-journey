@@ -11,4 +11,4 @@ Type conversions, alert and prompt
 If else and logical operators
 
 27 May 2026
-Loops
+Loops and functions

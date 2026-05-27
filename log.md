@@ -9,3 +9,6 @@ Type conversions, alert and prompt
 
 26 May 2026
 If else and logical operators
+
+27 May 2026
+Loops

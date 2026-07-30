@@ -1,0 +1,57 @@
+const expenses = [
+  { amount: 50, category: "Food" },
+  { amount: 120, category: "Transport" },
+  { amount: 80, category: "Food" },
+  { amount: 200, category: "Shopping" },
+  { amount: 35, category: "Entertainment" },
+  { amount: 150, category: "Bills" },
+  { amount: 90, category: "Transport" },
+  { amount: 60, category: "Entertainment" },
+  { amount: 300, category: "Shopping" },
+  { amount: 110, category: "Bills" }
+];
+
+// 1. Total of all expenses
+const total = () =>
+  expenses.reduce((sum, expense) => sum + expense.amount, 0);
+
+// 2. Expenses over 100
+const over100 = () =>
+  expenses.filter(expense => expense.amount > 100);
+
+// 3. Unique categories
+const uniqueCategories = () =>
+  [...new Set(expenses.map(expense => expense.category))];
+
+// 4. Total amount by category
+const byCategory = () =>
+  expenses.reduce((result, expense) => {
+    result[expense.category] =
+      (result[expense.category] || 0) + expense.amount;
+    return result;
+  }, {});
+
+// Example usage
+console.log(total());
+// 1195
+
+console.log(over100());
+// [
+//   { amount: 120, category: "Transport" },
+//   { amount: 200, category: "Shopping" },
+//   { amount: 150, category: "Bills" },
+//   { amount: 300, category: "Shopping" },
+//   { amount: 110, category: "Bills" }
+// ]
+
+console.log(uniqueCategories());
+// ["Food", "Transport", "Shopping", "Entertainment", "Bills"]
+
+console.log(byCategory());
+// {
+//   Food: 130,
+//   Transport: 210,
+//   Shopping: 500,
+//   Entertainment: 95,
+//   Bills: 260
+// }

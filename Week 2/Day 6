@@ -1,0 +1,49 @@
+// Book objects
+const book1 = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  year: 1937,
+  read: true,
+  getSummary() {
+    return `${this.title} by ${this.author} (${this.year}) - ${
+      this.read ? "Read" : "Not Read"
+    }`;
+  }
+};
+
+const book2 = {
+  title: "1984",
+  author: "George Orwell",
+  year: 1949,
+  read: false,
+  getSummary() {
+    return `${this.title} by ${this.author} (${this.year}) - ${
+      this.read ? "Read" : "Not Read"
+    }`;
+  }
+};
+
+const book3 = {
+  title: "To Kill a Mockingbird",
+  author: "Harper Lee",
+  year: 1960,
+  read: true,
+  getSummary() {
+    return `${this.title} by ${this.author} (${this.year}) - ${
+      this.read ? "Read" : "Not Read"
+    }`;
+  }
+};
+
+// Array of books
+const books = [book1, book2, book3];
+
+// Loop and print each summary
+for (const book of books) {
+  console.log(book.getSummary());
+}
+
+//output
+// The Hobbit by J.R.R. Tolkien (1937) - Read
+// 1984 by George Orwell (1949) - Not Read
+// To Kill a Mockingbird by Harper Lee (1960) - Read

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Update & Toggle Background</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input, button {
+      margin: 8px 0;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    #output {
+      margin-top: 16px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: lightblue;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" id="textInput" placeholder="Type something..." />
+  <br>
+  <button id="toggleBtn">Toggle Background</button>
+
+  <div id="output"></div>
+
+  <script>
+    const input = document.getElementById("textInput");
+    const button = document.getElementById("toggleBtn");
+    const output = document.getElementById("output");
+
+    // Live update div text
+    input.addEventListener("input", () => {
+      output.textContent = input.value;
+    });
+
+    // Toggle background color
+    let isBlue = true;
+
+    button.addEventListener("click", () => {
+      isBlue = !isBlue;
+      output.style.backgroundColor = isBlue ? "lightblue" : "lightgreen";
+    });
+  </script>
+
+</body>
+</html>
